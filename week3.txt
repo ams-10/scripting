@@ -1,0 +1,100 @@
+WEEK - 3: Develop and demonstrate the usage of inline, internal and external style sheet using CSS.
+Aim: Design a web page using CSS which includes the following:
+1) Use different font styles
+2) Control the repetition of image with background-repeat and no-repeat property
+3) Define style for links as a: link, a: active, a: hover, a: visited
+4) Add customized cursors for links.
+Inline CSS:
+Inline styles look and operate much like CSS, with a few differences. Inline styles directly affect the tag they are written in, without the use of selectors.
+Here’s a basic HTML page using inline styles:
+Source code:
+<!DOCTYPE html>
+<html>
+<head>
+<title>demo</title>
+</head>
+<body style="background-color: grey"><center>
+<h1 style="background-color: white"> Implementation of inline css</h1></center>
+<p style="background-color: aqua; width: 100%;"> A paragraph with<br> background-color : aqua<br><br>color : black<br>having width : 70%</p>
+<img style="opacity: 0.5; width: 25%;height:25%" src="desert.jpg">
+<p style="background-color: aqua; "> An image with <br><br> opacity : 0.5 <br><br> width : 25% and <br><br>height : 25%</p>
+</body>
+</html>
+OUTPUT:
+Inpage CSS :
+An internal stylesheet holds the CSS code for the webpage in the head section of the particular file. This makes it easy to apply styles like classes or id's in order to reuse the code. The downside of using an internal stylesheet is that changes to the internal stylesheet only effect the page the code is inserted into.
+Source code:
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+h1{
+background-color: white;
+}
+body{
+background-color: grey;
+}
+.a{
+background-color: aqua;
+width: 70%;
+}
+#p1{
+background-color: aqua;
+width: 30%;
+}
+img{
+height: 25%;
+width: 25%;
+opacity: 0.5;
+}
+</style>
+<title>inPage</title>
+</head>
+<body><center>
+<h1> Implementation of inPage css</h1></center>
+<p class="a"> A paragraph with<br> <br>background-color : aqua<br><br> color : black <br><br> having width : 70%</p>
+<img src="desert.jpg">
+<p id="p1"> An image with <br><br> opacity : 0.7<br><br> width : 25% and <br><br> height : 25%</p>
+</body>
+</html>
+OUTPUT:
+External CSS:
+ When using an external stylesheet you must reference the stylesheet in the HTML page that is using it. You would add the code below to your HTML document to reference a stylesheet in the same location as the HTML page called "style.css". You can upload the "style.css" page can be located anywhere in your files. You can name your stylesheet whatever you like and link to as many as you like. You can simply link to it in your head section and every edit your make to the "style.css" sheet will be globally changed through out the site. Below is what the code looks like.
+<link rel="stylesheet" type="text/css" href=”style.css" />
+Source code:
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="mycss.css">
+<title>external</title>
+</head>
+<body><center>
+<h1> Implementation of External css</h1></center>
+<p class="a"> A paragraph with<br> <br>background-color : acqua<br><br> color : black <br><br> having width : 70%</p>
+<img src="desert.jpg">
+<p id="p1"> An image with <br><br> opacity : 0.5<br><br> width : 25% and <br><br> height : 25%</p>
+</body>
+</html>
+mycss.css
+h1{
+background-color: white;
+}
+body{
+background-color: grey;
+}
+.a{
+background-color: aqua;
+width: 70%;
+}
+#p1{
+background-color: aqua;
+width: 30%;
+}
+img{
+height: 25%;
+width: 25%;
+opacity: 0.5;
+}
+OUTPUT:
+
+	
+

@@ -1,0 +1,235 @@
+WEEK 1:
+Design the following static web pages required for an online book store web site.
+1) HOME PAGE: The static home page must contain three frames.
+2) LOGIN PAGE
+3) CATOLOGUE PAGE: The catalogue page should contain the details of all the books available in the web site in a table.
+4) REGISTRATION PAGE
+Aim: Design the following static web pages required for online book store.
+1. Home page:- the static home page must contains three pages
+2. Top frame:- logo and college name and links to homepage, login page, registration page and catalogue page
+3. Left frame:- at least four links for navigation which will display the catalogue of Respective links
+4. Right frame:- the pages to links in the left frame must be loaded here initially it Contains the description of the website.
+DESCRIPTION: In this program the entire web paged are created by using basic HTML tags. Home page is divided into 3 frames by using <frameset> and <frame> tags. A frame is used to display a web page within a web page.
+<frameset>:
+• The <frameset> tag defines a frameset.
+• The <frameset> element holds one or more <frame> elements.
+• Each <frame> element can hold a separate document.
+• The <frameset> element specifies HOW MANY columns or rows there will be in the frameset, and HOW MUCH percentage/pixels of space will occupy each of them.
+<frame>:
+• The <frame> tag defines one particular window (frame) within a <frameset>.
+• Each <frame> in a <frameset> can have different attributes, such as border, scrolling, the ability to resize, etc.
+PROGRAM:
+home.html:
+<frameset rows="40%,*">
+<frame src="top.html" noresize scrolling="NO" name="topframe">
+<frameset cols="15%,*">
+<frame src="left.html" noresize scrolling="NO" name="leftframe">
+<frame src="right.html" noresize name="rightframe" scrolling="auto">
+</frameset>
+</frameset>
+top.html:
+<html>
+<head>
+<title>Top Frame</title>
+</head>
+<body bgcolor="YellowGreen ">
+<img src="C:\Users\WELCOME\Downloads\Latest Official Logo (1).png" width="250" height="250" align="left">
+<center>
+<marquee bgcolor="yellow" width="650" behavior="alternate">
+<font face="Brush Script MT" size="8" color="red"><b><i>Online Book Store</i></b>
+</font>
+</marquee> <br>
+<font face="Brush Script" size="6" color="white"><b>Created & Maintained <br> by<br>
+Department of Information Technology <br>Lords Institute of Engineering and Technology(A) </b></font>
+</center>
+<br>
+<table width="100%" height="50%" cellspacing=10>
+<tr align="center">
+<td> <a href="Home.html" target="_parent"><font face="Brush Script" size="6" color="navy"><b>Home</b> </a> </td>
+<td> <a href="login.html" target="rightframe"><font face="Brush Script" size="6" color="navy"><b>Login</b></a> </td>
+<td> <a href="registration.html" target="rightframe"> <font face="Brush Script" size="6" color="navy"><b>Register</b> </a> </td>
+<td> <a href="catalogue.html" target="rightframe"> <font face="Brush Script" size="6" color="navy"><b>Catalogue</b></a> </td>
+</tr>
+</table>
+</body>
+</html>
+left.html:
+<html>
+<body align="center" bgcolor="bisque"> <br>
+<a href="cse.html" target="rightframe"><font size="6"><b>IT</b></font></a><br><br>
+<a href="ece.html" target="rightframe"><font size="6"><b>ECE</b></font></a><br><br>
+<a href="eee.html" target="rightframe"><font size="6"><b>EEE</b></font></a><br><br>
+<a href="mech.html" target="rightframe"><font size="6"><b>MECH</b></font></a><br>
+</body>
+</html>
+right.html:
+<html>
+<body bgcolor="orange">
+<center>
+<img src="Books.jpg" height="250"><br>
+<font face="Brush Script MT" size="8" color="Brown">
+<h1><b>Welcome to the Online Book Store!!!</b></font><br />
+<font face="Brush Script MT" size="10" color="red">
+<h2><b> "A Huge Collection Of Engineering E-Books"</b></h2></font>
+</center>
+</body>
+</html>
+it.html:
+<html>
+<head><title>IT</title></head>
+<body bgcolor="cyan">
+<center><font color="blue"><h1>Information Technology</h1></font></center>
+<br>
+<table align="center">
+<tr>
+<td>Text Books</td>
+<td>
+<select >
+<option value="select the book" selected>Select the book
+<option value="Automata Theory">Automata Theory
+<option value="Software Engineering">Software Engineering
+<option value="Java">Java
+<option value="Oracle">Oracle
+<option value="Ms SQL Server">Ms SQL Server
+<option value="MySql">MySql
+</select>
+</td></tr>
+<tr>
+<td>Quantity</td>
+<td><input type="text" id="q"></td>
+</tr>
+<tr>
+<td></td>
+<td>
+<form method=post action="order.html">
+<input type="submit" value=ok />
+</form>
+</td>
+</tr>
+</table>
+<center>
+<pre> Cost of one book is"500" + shipping "100" </pre>
+</center>
+</body>
+</html>
+ece.html:
+<html>
+<body bgcolor="Plum">
+<h1><font color="blue">Electronics and Communication Engineering</font></h1>
+<h2>
+<ul>
+<li>Digital Circuits</li> <li>Signals and Systems</li> <li>Digital Communication</li>
+</ul>
+</h2>
+</body>
+</html>
+eee.html:
+<html>
+<body bgcolor="Plum">
+<h1><font color="blue">Electrical and Electronics Engineering</font></h1>
+<h2>
+<ul type="square">
+<li>Concepts in Electric Circuits</li>
+<li>Introduction to Electronic Engineering</li>
+<li>Electrical Power</li>
+</ul>
+</h2>
+</body>
+</html>
+mech.html:
+<html>
+<body bgcolor="Plum">
+<h1><font color="blue">Electronics and Communication Engineering</font></h1>
+<h2>
+<ol type="I">
+<li>Theory of Machines</li>
+<li>Automation and Robotics</li>
+<li>Engineering Fluid Mechanics</li>
+</ol>
+</h2>
+</body>
+</html>
+catalogue.html:
+<html>
+<head>
+<title> Catalogue </title>
+</head>
+<body bgcolor="pink">
+<form action="order.html">
+<table border="1" width="100%">
+<tr>
+<td>
+<img src="SE.jpg" width=100 height=100/>
+</td>
+<td> Book: Software Engineering: A Practitioners Approach <br> Author: Roger S.Pressman <br> Publication:McGrawHill, Eighth Edition, 2019</td> <td>531 &nbsp;&nbsp;&nbsp;</td>
+<td> <input type="submit" value="Add to cart"/></td> </tr>
+<tr>
+<td> <img src="AT.jpg" width=100 height=100/></td>
+<td> Book: Introduction to Automata Theory, languages, and Computation, <br> Author:John E. Hopcroft, Rajeev Motwani and Jeffrey
+D. Ullman, <br> Publication: Pearson Education India, 3rd Edition,2008.</td> <td> 898 &nbsp;&nbsp;&nbsp; </td>
+<td> <input type="submit" value="Add to cart"/></td> </tr>
+</table> </form>
+</body> </html>
+login.html:
+<html>
+<body bg color="pink">
+<basefont face="Cambria" size="4"> <br>
+<center>
+<img src="login.png" width="385" height="200" /><br />
+<font face="Brush Script MT" size="7" color="purple">
+<b>Enter Login Details:</b>
+</font>
+</center>
+<form name="f1" method="post" action="right.html">
+<table align="center" width="100" height="150" cellspacing=”15”>
+<tr><td><b>Login ID:</b></td>
+<td><input type="text" name="t1"></td>
+</tr>
+<tr>
+<td><b>Password:</b></td>
+<td><input type="password" name="t2"></td>
+</tr>
+<tr align="center">
+<td><input type="submit" name="b1" value="Submit"></td>
+<td><input type="reset" name="b2" value="Reset"></td>
+</tr>
+</table> </form> </basefont> </body> </html>
+registration.html:
+<html>
+<head><title>Registration Form</title></head>
+<body bgcolor="#E4F0F8">
+<center><font color="blue" size="6" face="arial">Registration Form</font></center><br />
+<form action="right.html">
+First Name(Minimum 6 characters)<font color="red">* </font>
+<input type='text' id='firstname' /><br /><br />
+Last Name<font color="red"><font color="red">* </font> </font> &nbsp;&nbsp;&nbsp;
+<input type='text' id='lastname' /><br /><br /> EmailAddress<font color="red">* </font> &nbsp;&nbsp;&nbsp;
+<input type='text' id='email' /><br />
+<font color="red">(one e-mail id only):</font> &nbsp;&nbsp;&nbsp;
+<font color="redblue">e.g. smith@hotmail.com</font><br /><br/> Password(minimum 6 characters)<font color="red">* </font> &nbsp;&nbsp;&nbsp;
+<input type='password' id='pass'><br /><br/> Address<font color="red">* </font> &nbsp;&nbsp;&nbsp;
+<textarea rows="2" cols="20" id='addr' /></textarea> <br /> <br/> Mobile No<font color="red">* </font> &nbsp;&nbsp;&nbsp;
+<input type='text' id='mobileno' /><br /> Gender: <input type='radio' name="gender">male
+<input type='radio' name="gender">female<br/><br />
+<input type='Submit' value='submit' />
+<input type='Reset' value='reset' />
+</form> </body> </html>
+order.html:
+<html>
+<head><title>order confirmation</title></head>
+<body bgcolor="cyan">
+<center>
+<pre><strong>
+<b>Your order Is Confirmed
+</strong></pre>
+<h2><b>THANK YOU...Visit Again</h2>
+</center>
+</body>
+</html>
+OUTPUT:
+EXERCISE:
+1. Create your class time table in a webpage.
+2. Design the static web pages required for an online shopping cart.
+
+	
+
